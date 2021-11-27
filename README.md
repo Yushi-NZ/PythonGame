@@ -3,25 +3,21 @@
 ## Controls
 
 ### Yellow Player
-
+```
 W = UP 
-
 A = LEFT
-
 S = DOWN
-
 D = RIGHT
-
+LCTRL = FIRE BULLET
+```
 ### Red Player
-
+```
 I = UP
-
 J = LEFT
-
 K = DOWN
-
 L = RIGHT
-
+RCTRL = FIRE BULLET
+```
 ## Requirements
 
 Requirements:
@@ -31,11 +27,10 @@ Requirements:
 
 
 How to install:
-
 ```
 pip3 install pygame
-
+```
 or
-
+```
 pip install pygame
 ```
