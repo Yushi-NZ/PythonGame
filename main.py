@@ -9,6 +9,7 @@ pygame.display.set_caption("First Game!")
 # Variables
 WHITE = (255, 255 ,255)
 FPS = 60
+VEL = 5
 
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
@@ -49,6 +50,16 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
         
+        keys_pressed = pygame.key.get_pressed()
+        if keys_pressed[pygame.K_a]: # LEFT KEY
+            yellow.x -= VEL
+        if keys_pressed[pygame.K_d]: # RIGHT KEY
+            yellow.x += VEL
+        if keys_pressed[pygame.K_w]: # UP KEY
+            yellow.y -= VEL
+        if keys_pressed[pygame.K_s]: # DOWN KEY
+            yellow.y += VEL
+
         # Drawing the window function
         draw_window(red, yellow)
 
