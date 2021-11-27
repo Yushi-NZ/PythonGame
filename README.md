@@ -1,7 +1,8 @@
 # PythonGame
 
-#Yellow Player
-#Controls:
+Yellow Player
+Controls:
+
 W = UP 
 
 A = LEFT
@@ -10,8 +11,9 @@ S = DOWN
 
 D = RIGHT
 
-#Red Player
-#Controls:
+Red Player
+Controls:
+
 I = UP
 
 J = LEFT
