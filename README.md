@@ -27,11 +27,11 @@ Requirements:
 
 
 How to install:
-
 ```
 pip3 install pygame
 
+```
 or
-
+```
 pip install pygame
 ```
