@@ -34,11 +34,36 @@ def draw_window(red, yellow):
 
     pygame.display.update()
 
+# Spaceship Movement Handlers
+
+def yellow_movement(keys_pressed, yellow):
+        if keys_pressed[pygame.K_a]: # LEFT KEY
+            yellow.x -= VEL
+        if keys_pressed[pygame.K_d]: # RIGHT KEY
+            yellow.x += VEL
+        if keys_pressed[pygame.K_w]: # UP KEY
+            yellow.y -= VEL
+        if keys_pressed[pygame.K_s]: # DOWN KEY
+            yellow.y += VEL
+
+def red_movement(keys_pressed, yellow):
+        if keys_pressed[pygame.K_j]: # LEFT KEY
+            yellow.x -= VEL
+        if keys_pressed[pygame.K_l]: # RIGHT KEY
+            yellow.x += VEL
+        if keys_pressed[pygame.K_i]: # UP KEY
+            yellow.y -= VEL
+        if keys_pressed[pygame.K_k]: # DOWN KEY
+            yellow.y += VEL
+
+
 def main():
 
+    # Defining spaceship transforms
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
+    # Creates clock for FPS
     clock = pygame.time.Clock()
     
     # Handles main game loop
@@ -50,15 +75,10 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
         
+        # Movement for red and yellow spaceships
         keys_pressed = pygame.key.get_pressed()
-        if keys_pressed[pygame.K_a]: # LEFT KEY
-            yellow.x -= VEL
-        if keys_pressed[pygame.K_d]: # RIGHT KEY
-            yellow.x += VEL
-        if keys_pressed[pygame.K_w]: # UP KEY
-            yellow.y -= VEL
-        if keys_pressed[pygame.K_s]: # DOWN KEY
-            yellow.y += VEL
+        yellow_movement(keys_pressed, yellow)
+        red_movement(keys_pressed, red)
 
         # Drawing the window function
         draw_window(red, yellow)
