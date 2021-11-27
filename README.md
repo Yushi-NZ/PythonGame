@@ -3,17 +3,13 @@
 ## Controls
 
 ### Yellow Player
-
+```
 W = UP 
-
 A = LEFT
-
 S = DOWN
-
 D = RIGHT
-
 LCTRL = FIRE BULLET
-
+```
 ### Red Player
 
 I = UP
