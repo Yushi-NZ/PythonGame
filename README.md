@@ -2,7 +2,6 @@
 
 Yellow Player
 Controls:
-
 W = UP 
 
 A = LEFT
@@ -13,7 +12,6 @@ D = RIGHT
 
 Red Player
 Controls:
-
 I = UP
 
 J = LEFT
