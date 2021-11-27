@@ -1,6 +1,8 @@
-# Controls
+# PyGame Test
 
-Yellow Player
+## Controls
+
+### Yellow Player
 
 W = UP 
 
@@ -10,7 +12,7 @@ S = DOWN
 
 D = RIGHT
 
-Red Player
+### Red Player
 
 I = UP
 
@@ -20,8 +22,10 @@ K = DOWN
 
 L = RIGHT
 
-# Requirements
+## Requirements
 
+Requiremetns:
+```
 Python 3.9
-
 PyGame 2.1.0
+```
