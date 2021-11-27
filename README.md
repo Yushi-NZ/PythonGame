@@ -1,7 +1,6 @@
-# PythonGame
+# Controls
 
 Yellow Player
-Controls:
 
 W = UP 
 
@@ -12,7 +11,6 @@ S = DOWN
 D = RIGHT
 
 Red Player
-Controls:
 
 I = UP
 
@@ -21,3 +19,8 @@ J = LEFT
 K = DOWN
 
 L = RIGHT
+
+# Requirements
+
+Python 3.9
+PyGame 2.1.0
