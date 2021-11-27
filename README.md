@@ -2,7 +2,7 @@
 
 Yellow Player
 Controls:
-W = UP
+W = UP \n
 A = LEFT
 S = DOWN
 D = RIGT
