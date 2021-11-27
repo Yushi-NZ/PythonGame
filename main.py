@@ -62,8 +62,8 @@ def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_hea
     pygame.draw.rect(WIN, BLACK, BORDER)
 
     # Creating the text object
-    red_health_text = HEALTH_FONT.render('Health: ' + str(red_health), 1, WHITE)
-    yellow_health_text = HEALTH_FONT.render('Health: ' + str(yellow_health), 1, WHITE)
+    red_health_text = HEALTH_FONT.render('Red Health: ' + str(red_health), 1, WHITE)
+    yellow_health_text = HEALTH_FONT.render('Yellow Health: ' + str(yellow_health), 1, WHITE)
 
     # Drawing "Health: " text for both Yellow and Red spaceships
     WIN.blit(red_health_text, (WIDTH - red_health_text.get_width() - 10, 10))
@@ -180,14 +180,17 @@ def main():
             if event.type == YELLOW_HIT:
                 yellow_health -= 1
                 BULLET_HIT_SOUND.play()
-                
+
+        # Yellow Wins    
         winner_text = ""
         if red_health <= 0:
             winner_text = "Yellow Wins!"
 
+        # Red Wins
         if yellow_health <= 0:
             winner_text = "Red Wins!"
 
+        # Draw winnter
         if winner_text != "":
             draw_winner(winner_text)
             break
@@ -203,7 +206,7 @@ def main():
         # Drawing the window function
         draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health)
 
-    # Quit game if run = False
+    # Restarting game
     main()
 
 # Handles calling main function (safe keeping)
