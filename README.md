@@ -11,17 +11,13 @@ D = RIGHT
 LCTRL = FIRE BULLET
 ```
 ### Red Player
-
+```
 I = UP
-
 J = LEFT
-
 K = DOWN
-
 L = RIGHT
-
 RCTRL = FIRE BULLET
-
+```
 ## Requirements
 
 Requirements:
