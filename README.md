@@ -25,7 +25,17 @@ L = RIGHT
 ## Requirements
 
 Requiremetns:
+
+- Python 3.9
+- PyGame 2.1.0
+
+
+How to install:
+
 ```
-Python 3.9
-PyGame 2.1.0
+pip3 install pygame
+
+or
+
+pip install pygame
 ```
