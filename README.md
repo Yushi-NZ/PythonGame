@@ -23,4 +23,5 @@ L = RIGHT
 # Requirements
 
 Python 3.9
+
 PyGame 2.1.0
