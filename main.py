@@ -1,7 +1,11 @@
+from math import sqrt
 import pygame
 import os
 
 from pygame.constants import WINDOWENTER
+from pygame import Vector2
+import random
+
 pygame.font.init()
 pygame.mixer.init()
 
@@ -107,19 +111,24 @@ def red_movement(keys_pressed, red):
 
 # Deals with bullet collisions
 def handle_bullets(yellow_bullets, red_bullets, yellow, red):
+
     for bullet in yellow_bullets:
         bullet.x += BULLET_VEL
+
         if red.colliderect(bullet):
             pygame.event.post(pygame.event.Event(RED_HIT))
             yellow_bullets.remove(bullet)
+
         elif bullet.x > WIDTH:
             yellow_bullets.remove(bullet)
 
     for bullet in red_bullets:
         bullet.x -= BULLET_VEL
+
         if yellow.colliderect(bullet):
             pygame.event.post(pygame.event.Event(YELLOW_HIT))
             red_bullets.remove(bullet)
+
         elif bullet.x < 0:
             red_bullets.remove(bullet)
 
@@ -163,6 +172,8 @@ def main():
             # Handling shooting
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
+
+                    
                     bullet = pygame.Rect(yellow.x + yellow.width, yellow.y + yellow.height//2 -2, 10, 5)
                     yellow_bullets.append(bullet)
                     BULLET_FIRE_SOUND.play()
